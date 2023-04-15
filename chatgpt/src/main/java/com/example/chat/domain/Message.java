@@ -1,4 +1,4 @@
-package com.example.chatgpt.domain;
+package com.example.chat.domain;
 
 import lombok.Builder;
 import lombok.Data;

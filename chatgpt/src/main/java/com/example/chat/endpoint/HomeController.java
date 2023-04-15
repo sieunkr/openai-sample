@@ -1,6 +1,6 @@
-package com.example.chatgpt.endpoint;
+package com.example.chat.endpoint;
 
-import com.example.chatgpt.service.ChatService;
+import com.example.chat.application.ChatApplicationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class HomeController {
 
-    private final ChatService chatService;
+    private final ChatApplicationService chatApplicationService;
 
     @GetMapping("/chat")
     public String chat(@RequestParam(value="q") String question){
@@ -22,6 +22,6 @@ public class HomeController {
             throw new RuntimeException();
         }
 
-        return chatService.chatCompletions(question);
+        return chatApplicationService.chatCompletions(question);
     }
 }

@@ -1,6 +1,6 @@
-package com.example.chatgpt.service.dto;
+package com.example.chat.application.dto;
 
-import com.example.chatgpt.domain.Message;
+import com.example.chat.domain.Message;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,7 +13,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ChatGPTRequest implements Serializable {
+public class ChatRequest implements Serializable {
 
     private String model;
     private List<Message> messages;

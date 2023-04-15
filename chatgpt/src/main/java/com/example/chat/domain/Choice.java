@@ -1,4 +1,4 @@
-package com.example.chatgpt.domain;
+package com.example.chat.domain;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
