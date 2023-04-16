@@ -1,14 +1,14 @@
-package com.example.chat.infrastructure;
+package com.example.openai.infrastructure;
 
-import com.example.chat.application.dto.ChatRequest;
-import com.example.chat.application.dto.ChatResponse;
+import com.example.openai.application.dto.ChatRequest;
+import com.example.openai.application.dto.ChatResponse;
 import feign.Headers;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 
 @FeignClient(name = "chat", url = "https://api.openai.com/v1/")
-public interface ChatClient {
+public interface ChatCompletionClient {
 
     @Headers("Content-Type: application/json")
     @PostMapping("/chat/completions")

@@ -1,6 +1,6 @@
-package com.example.chat.endpoint;
+package com.example.openai.endpoint;
 
-import com.example.chat.application.ChatApplicationService;
+import com.example.openai.application.ChatCompletionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class HomeController {
 
-    private final ChatApplicationService chatApplicationService;
+    private final ChatCompletionService chatCompletionService;
 
     @GetMapping("/chat")
     public String chat(@RequestParam(value="q") String question){
@@ -22,6 +22,6 @@ public class HomeController {
             throw new RuntimeException();
         }
 
-        return chatApplicationService.chatCompletions(question);
+        return chatCompletionService.chatCompletions(question);
     }
 }

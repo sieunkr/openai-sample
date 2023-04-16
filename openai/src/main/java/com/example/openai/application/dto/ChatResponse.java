@@ -1,7 +1,7 @@
-package com.example.chat.application.dto;
+package com.example.openai.application.dto;
 
-import com.example.chat.domain.Usage;
-import com.example.chat.domain.Choice;
+import com.example.openai.domain.chat.Usage;
+import com.example.openai.domain.chat.Choice;
 import lombok.Data;
 
 import java.io.Serializable;

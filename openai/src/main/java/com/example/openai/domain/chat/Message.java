@@ -1,4 +1,4 @@
-package com.example.chat.domain;
+package com.example.openai.domain.chat;
 
 import lombok.Builder;
 import lombok.Data;

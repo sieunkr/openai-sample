@@ -1,6 +1,6 @@
-package com.example.chat.application.dto;
+package com.example.openai.application.dto;
 
-import com.example.chat.domain.Message;
+import com.example.openai.domain.chat.Message;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
