@@ -5,11 +5,11 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class Choice implements Serializable {
+public class ChatChoice implements Serializable {
 
     private Integer index;
 
-    private Message message;
+    private ChatMessage chatMessage;
 
     @JsonProperty("finish_reason")
     private String finishReason;

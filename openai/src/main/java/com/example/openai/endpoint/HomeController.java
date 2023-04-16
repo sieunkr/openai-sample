@@ -1,6 +1,7 @@
 package com.example.openai.endpoint;
 
 import com.example.openai.application.ChatCompletionService;
+import com.example.openai.application.EditService;
 import com.example.openai.application.ImageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.util.StringUtils;
@@ -16,6 +17,7 @@ public class HomeController {
 
     private final ChatCompletionService chatCompletionService;
     private final ImageService imageService;
+    private final EditService editService;
 
     @GetMapping("/chat")
     public String chat(@RequestParam(value="q") String question){
@@ -26,10 +28,16 @@ public class HomeController {
 
         return chatCompletionService.chatCompletions(question);
     }
-    
+
     @GetMapping("/image")
     public String image() {
 
         return imageService.createImage();
+    }
+
+    @GetMapping("/edit")
+    public String edit() {
+
+        return editService.edit();
     }
 }
