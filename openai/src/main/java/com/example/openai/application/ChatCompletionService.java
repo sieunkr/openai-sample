@@ -1,7 +1,7 @@
 package com.example.openai.application;
 
 import com.example.openai.application.dto.ChatRequest;
-import com.example.openai.domain.chat.ChatMessage;
+import com.example.openai.domain.chat.Message;
 import com.example.openai.infrastructure.ChatCompletionClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,23 +22,23 @@ public class ChatCompletionService {
 
     public String chatCompletions(final String question) {
 
-        ChatMessage chatMessage = ChatMessage.builder()
+        Message message = Message.builder()
                 .role(ROLE_USER)
                 .content(question)
                 .build();
 
         ChatRequest chatRequest = ChatRequest.builder()
                 .model(MODEL)
-                .chatMessages(Collections.singletonList(chatMessage))
+                .messages(Collections.singletonList(message))
                 .build();
 
         return chatCompletionClient
                 .chatCompletions(apiKey, chatRequest)
-                .getChatChoices()
+                .getChoices()
                 .stream()
                 .findFirst()
                 .orElseThrow()
-                .getChatMessage()
+                .getMessage()
                 .getContent();
     }
 }

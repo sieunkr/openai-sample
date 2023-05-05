@@ -18,7 +18,11 @@ public class ImageService {
 
     public String createImage() {
 
-        ImageRequest request = ImageRequest.builder().prompt("a korean dog").n(1).size("1024x1024").build();
+        ImageRequest request = ImageRequest.builder()
+                .prompt("a Korean country dog")
+                .n(1)
+                .size("1024x1024")
+                .build();
 
         return imageClient.createImage(apiKey, request).getData().stream().findFirst().orElseThrow().getUrl();
     }

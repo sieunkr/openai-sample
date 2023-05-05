@@ -1,6 +1,5 @@
 package com.example.openai.infrastructure;
 
-import com.example.openai.application.dto.ChatResponse;
 import com.example.openai.application.dto.EditRequest;
 import com.example.openai.application.dto.EditResponse;
 import feign.Headers;

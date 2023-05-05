@@ -1,6 +1,6 @@
 package com.example.openai.application.dto;
 
-import com.example.openai.domain.chat.ChatMessage;
+import com.example.openai.domain.chat.Message;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,5 +16,5 @@ import java.util.List;
 public class ChatRequest implements Serializable {
 
     private String model;
-    private List<ChatMessage> chatMessages;
+    private List<Message> messages;
 }

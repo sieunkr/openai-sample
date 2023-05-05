@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Data
 @Builder
-public class ChatMessage implements Serializable {
+public class Message implements Serializable {
 
     private String role;
 

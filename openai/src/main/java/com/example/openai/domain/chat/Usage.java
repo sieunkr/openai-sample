@@ -6,7 +6,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class ChatUsage implements Serializable {
+public class Usage implements Serializable {
 
     @JsonProperty("prompt_tokens")
     private String promptTokens;
